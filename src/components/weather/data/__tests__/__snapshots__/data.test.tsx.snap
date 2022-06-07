@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WeatherData should return error 1`] = `
+<body>
+  <div>
+    <div
+      class="alert-container error"
+    >
+      foobar
+    </div>
+  </div>
+</body>
+`;
+
+exports[`WeatherData should return false 1`] = `
+<body>
+  <div>
+    <div
+      class="spinner-container"
+    >
+      <div
+        class="spinner"
+      />
+    </div>
+  </div>
+</body>
+`;

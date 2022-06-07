@@ -1,0 +1,45 @@
+.container {
+  .weather-card {
+    display: flex;
+    gap: 25px;
+
+    .weather-icon {
+      svg {
+        width: 117px;
+        height: 117px;
+      }
+    }
+
+    .title {
+      font-weight: 400;
+      font-size: 25px;
+      line-height: 29px;
+      margin-bottom: 1px;
+    }
+
+    .temperature {
+      font-size: 20px;
+      line-height: 23px;
+      margin-bottom: 5px;
+    }
+
+    .details {
+      font-size: 15px;
+      line-height: 18px;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .container {
+    .weather-card {
+      .title {
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 26px;
+        margin-bottom: 4px;
+      }
+    }
+  }
+}

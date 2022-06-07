@@ -1,0 +1,149 @@
+svg {
+    width: 100%;
+    height: auto;
+    pointer-events: none;
+    --speed: .8s;
+}
+
+svg .rain-path {
+    stroke-dasharray: 50;
+    stroke-dashoffset: 50;
+    mix-blend-mode: screen;
+    transform-origin: center;
+}
+
+svg #rain-1 {
+    animation: drop1 var(--speed, 5s) linear infinite;
+}
+
+svg #rain-2 {
+    animation: drop2 var(--speed, 5s) linear infinite;
+}
+
+svg #rain-3 {
+    animation: drop3 var(--speed, 5s) linear infinite;
+}
+
+svg #rain-4 {
+    animation: drop4 var(--speed, 5s) linear infinite;
+}
+
+svg #rain-5 {
+    animation: drop5 var(--speed, 5s) linear infinite;
+}
+
+@keyframes drop1 {
+    0% {
+        transform: translate(0px);
+        stroke-dashoffset: 50;
+    }
+
+    50% {
+        stroke-dashoffset: 0;
+        opacity: .5;
+    }
+
+    80% {
+        stroke-dashoffset: 0;
+        opacity: 0;
+    }
+
+    100% {
+        stroke-dashoffset: -50;
+        opacity: 0;
+    }
+}
+
+@keyframes drop2 {
+    0% {
+        transform: translate(0px);
+        stroke-dashoffset: 50;
+        opacity: 0;
+    }
+
+    50% {
+        stroke-dashoffset: 0;
+        transform: translate(0px);
+        opacity: .5;
+    }
+
+    100% {
+        transform: translate(30px, -30px);
+        stroke-dashoffset: -50;
+        opacity: 0;
+    }
+}
+
+@keyframes drop3 {
+    0% {
+        transform: translate(0px);
+        stroke-dashoffset: 50;
+        opacity: 1;
+    }
+
+    30% {
+        stroke-dashoffset: 0;
+        transform: translate(0px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(30px, -30px);
+        stroke-dashoffset: -50;
+        opacity: 0;
+    }
+}
+
+@keyframes drop4 {
+    0% {
+        transform: translate(0px);
+        stroke-dashoffset: 50;
+        opacity: 0;
+    }
+
+    50% {
+        stroke-dashoffset: 0;
+        transform: translate(0px);
+        opacity: .1;
+    }
+
+    80% {
+        stroke-dashoffset: 0;
+        transform: translate(0px);
+        opacity: 1;
+    }
+
+
+    100% {
+        transform: translate(30px, -30px);
+        stroke-dashoffset: -50;
+        opacity: 0;
+    }
+}
+
+@keyframes drop5 {
+    0% {
+        transform: translate(0px);
+        stroke-dashoffset: 50;
+        opacity: 1;
+    }
+
+    50% {
+        stroke-dashoffset: 0;
+        transform: translate(0px);
+        opacity: .5;
+    }
+
+    80% {
+        stroke-dashoffset: 0;
+        transform: translate(50px, -50px);
+        opacity: 0;
+    }
+
+
+    100% {
+        transform: translate(50px, -50px);
+        stroke-dashoffset: -50;
+        opacity: 0;
+    }
+}

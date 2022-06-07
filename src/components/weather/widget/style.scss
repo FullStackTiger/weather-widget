@@ -1,0 +1,130 @@
+.container {
+  max-width: 900px;
+  color: white;
+
+  .weather-widget {
+    background: linear-gradient(180deg, #0668C2 0%, #1C0168 100%, rgba(68, 12, 158, 0) 100%), #C4C4C4;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    padding: 20px 30px;
+  }
+
+  .weather-list {
+    margin-top: 27px;
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(6, 1fr);
+    justify-content: center;
+    align-content: center;
+    gap: 20px 30px;
+  }
+
+  .weather-list-card {
+    display: flex;
+
+    .card-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .title {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 18px;
+        margin-bottom: 5px;
+      }
+
+      .icon {
+        margin-bottom: 18px;
+        max-width: 80px;
+        width: 100%;
+        height: 80px;
+        margin-bottom: 12px;
+        display: flex;
+
+        svg {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .temperature-min,
+      .temperature-max {
+        font-size: 12px;
+        line-height: 14px;
+      }
+
+      .temperature-max {
+        margin-bottom: 4px;
+        color: #FF0000;
+      }
+
+      .temperature-min {
+        color: #00FFFF;
+      }
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    .weather-list {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px 30px;
+
+      .weather-list-card:nth-child(3n) {
+        justify-content: flex-end;
+      }
+
+      .weather-list-card:nth-child(3n - 1) {
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .container {
+    .weather-widget {
+      padding: 20px 24px;
+    }
+
+    .weather-list {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 0px;
+
+      .weather-list-card {
+        justify-content: space-between;
+
+        .card-container {
+          display: flex;
+          width: 100%;
+          flex-direction: row;
+          justify-content: space-between;
+
+          .title {
+            margin-bottom: 0px;
+            min-width: 78px
+          }
+
+          .icon {
+            margin-bottom: 0px;
+            max-width: 50px;
+          }
+
+          .temperature-max {
+            margin-bottom: 0px;
+          }
+        }
+      }
+
+      .weather-list-card:nth-child(3n) {
+        justify-content: space-between;
+      }
+
+      .weather-list-card:nth-child(3n - 1) {
+        justify-content: space-between;
+      }
+    }
+  }
+}
