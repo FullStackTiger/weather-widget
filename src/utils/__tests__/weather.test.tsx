@@ -50,6 +50,6 @@ describe("Weather Utils - getMpsToKmph", () => {
 
 describe("Weather Utils - getTimestampToWeekday", () => {
   it("should be get North Easterly", () => {
-    expect(getTimestampToWeekday(1654740464)).toEqual("Wednesday");
+    expect(getTimestampToWeekday(1654686000)).toEqual("Wednesday");
   });
 });
